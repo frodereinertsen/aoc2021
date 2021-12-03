@@ -61,7 +61,7 @@ internal class SubmarineTest {
 
         val submarine = Submarine2().travel(course)
 
-        assertEquals(1938402, submarine.horizontalPosition * submarine.depth)
+        assertEquals(1947878632, submarine.horizontalPosition * submarine.depth)
     }
 
     private fun toCourse(input: String): List<Move> {
