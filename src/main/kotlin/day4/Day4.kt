@@ -23,8 +23,8 @@ class Board(val rows: List<List<Number>>, var hasBingo: Boolean = false) {
     }
 }
 
-class BingoGame(val numbers: List<Int>, val boards: List<Board>) {
-    fun play(): Bingo? {
+class BingoGame(private val numbers: List<Int>, private val boards: List<Board>) {
+    fun playToWin(): Bingo? {
         numbers.forEach { number ->
             boards.forEach { board ->
                 val bingo = board.play(number)
@@ -37,7 +37,7 @@ class BingoGame(val numbers: List<Int>, val boards: List<Board>) {
     }
 
     fun playToLose(): Bingo? {
-        numbers.forEachIndexed { roundIndex, number ->
+        numbers.forEach { number ->
             boards.forEach { board ->
                 val bingo = board.play(number)
                 if (bingo != null) {

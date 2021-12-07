@@ -32,14 +32,14 @@ internal class BingoGameTest {
 
     @Test
     fun example1() {
-        val bingo = createGame(exampleInput).play()
+        val bingo = createGame(exampleInput).playToWin()
 
         assertEquals(4512, bingo?.superSum())
     }
 
     @Test
     fun task1() {
-        val bingo = createGame(readFile("/day4.txt")).play()
+        val bingo = createGame(readFile("/day4.txt")).playToWin()
 
         assertEquals(89001, bingo?.superSum())
     }

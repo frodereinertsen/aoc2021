@@ -1,7 +1,6 @@
 package day1
 
 import InputUtils.readFile
-import InputUtils.toIntList
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -58,3 +57,5 @@ internal class Day1Test {
         assertEquals(1543, numIncreases(depths, 3))
     }
 }
+
+fun String.toIntList(): List<Int> = this.split("\n").map { it.toInt() }
