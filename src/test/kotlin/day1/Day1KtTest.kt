@@ -58,4 +58,4 @@ internal class Day1Test {
     }
 }
 
-fun String.toIntList(): List<Int> = this.split("\n").map { it.toInt() }
+fun String.toIntList(): List<Int> = lines().map { it.toInt() }

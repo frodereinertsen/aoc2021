@@ -59,8 +59,8 @@ internal class BingoGameTest {
     }
 
     private fun createGame(input: String): BingoGame {
-        val drawNumbers = input.split("\n").first().split(",").map { it.toInt() }
-        val boards = input.split("\n").drop(1).windowed(6, step = 6).map { lines ->
+        val drawNumbers = input.lines().first().split(",").map { it.toInt() }
+        val boards = input.lines().drop(1).windowed(6, step = 6).map { lines ->
             val numbers = mutableListOf<List<Number>>()
             lines.filter { it.isNotEmpty() }
                 .map { line ->

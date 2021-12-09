@@ -65,7 +65,8 @@ internal class SubmarineTest {
     }
 
     private fun toCourse(input: String): List<Move> {
-        val course = input.split("\n")
+        val course = input
+            .lines()
             .map {
                 it.split(" ").let { directionAndUnits ->
                     Move(Direction.valueOf(directionAndUnits[0]), directionAndUnits[1].toInt())

@@ -58,7 +58,7 @@ internal class GridCounterTest {
 
 private fun String.toLines(): List<Line> {
     val lines = mutableListOf<Line>()
-    split("\n").map { line ->
+    lines().map { line ->
         val (x1, y1, x2, y2) = """([\d]+),([\d]+) -> ([\d]+),([\d]+)""".toRegex().find(line)!!.destructured
         lines.add(Line(x1.toInt(), y1.toInt(), x2.toInt(), y2.toInt()))
     }

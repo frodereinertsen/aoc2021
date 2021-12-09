@@ -76,6 +76,6 @@ internal class Day3KtTest {
     }
 }
 
-private fun String.toIntMatrix(): Array<IntArray> = split("\n").map {
+private fun String.toIntMatrix(): Array<IntArray> = lines().map {
     it.map { it.digitToInt() }.toIntArray()
 }.toTypedArray()
