@@ -21,8 +21,14 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "13"
+}
+
+tasks.withType<Test> {
+    minHeapSize = "1g"
+    maxHeapSize = "8g"
+    jvmArgs = listOf("-XX:MaxPermSize=512m")
 }
 
 application {
