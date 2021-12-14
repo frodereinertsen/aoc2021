@@ -2,7 +2,7 @@ package day6
 
 fun fishing(initialFishDays: Map<Int, Long>, days: Int = 80): Map<Int, Long> {
     var fishDays = initialFishDays.toMutableMap()
-    for(day in 1..days) {
+    repeat(days) {
         val newFishDays = mutableMapOf<Int, Long>()
         for (fishDay in 0..7) {
             newFishDays[fishDay] = fishDays[fishDay + 1] ?: 0

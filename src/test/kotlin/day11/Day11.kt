@@ -42,7 +42,7 @@ class OctopusWorld(private val grid: Grid) {
     private var numberOfFlashes = 0
 
     fun numFlashesIn100Steps(): Int {
-        for (step in 1..100) {
+        repeat (100) {
             grid.apply {
                 step()
                 resetFlashing()
